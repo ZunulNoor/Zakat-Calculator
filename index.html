@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta chartset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content ="IE=edge">
+<meta name="viewport" content="width=device=width, initial-scale=1.0">
+	<title>Zakat Calculator</title>
+	<script>
+		// Store the zakat percentage as a variable
+		const zakatPercentage = 0.025;
+
+		// Take input from the user and convert it to a number
+		function calculateZakat() {
+			const userInput = Number(document.getElementById("userInput").value);
+
+			// Calculate the zakat value
+			const result = zakatPercentage * userInput;
+
+			// Display the zakat value to the user
+			alert("Your zakat value is: " + result.toFixed(2));
+		}
+	</script>
+</head>
+<body>
+	<h1><i>Zakat Calculator</i></h1>
+	<label for="userInput">Enter your total assets:</label><hr>
+	<input type="number" id="userInput"><br>
+	<button onclick="calculateZakat()">Calculate Zakat</button>
+</body>
+</html>
